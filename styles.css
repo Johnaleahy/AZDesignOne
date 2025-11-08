@@ -40,6 +40,8 @@ img {
 
 .site-header {
   padding: clamp(18px, 4vw, 32px) 0 clamp(12px, 3vw, 20px);
+  background: #ffffff;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08), 0 18px 36px rgba(0, 0, 0, 0.24);
 }
 
 .site-header__logo {
@@ -59,7 +61,7 @@ img {
 
 .hero__media {
   position: relative;
-  border-radius: 0 clamp(32px, 5vw, 46px) clamp(32px, 5vw, 46px) 0;
+  border-radius: 20px;
   overflow: hidden;
   min-height: clamp(360px, 52vh, 540px);
   margin-left: calc(var(--hero-pad-inline) * -1.4);
@@ -107,16 +109,22 @@ img {
   display: inline-flex;
   align-items: center;
   gap: clamp(12px, 2.2vw, 18px);
-  padding: 10px clamp(16px, 2.4vw, 24px);
-  border-radius: 999px;
-  background: rgba(5, 5, 5, 0.55);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.45);
+  flex-wrap: wrap;
 }
 
-.hero__eyebrow-logo {
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(10px, 2vw, 14px);
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid rgba(12, 18, 30, 0.08);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+.hero__badge-logo {
   width: clamp(46px, 6.8vw, 70px);
-  filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.45));
 }
 
 .hero__title {
@@ -154,7 +162,7 @@ img {
   text-transform: uppercase;
   font-size: 14px;
   padding: 18px 32px;
-  border-radius: 999px;
+  border-radius: 20px;
   background: linear-gradient(120deg, var(--accent), #ff9445 68%, #ffb678);
   color: #0b0b0f;
   box-shadow: 0 24px 50px rgba(244, 122, 32, 0.42);
@@ -196,7 +204,7 @@ img {
     min-height: clamp(320px, 60vh, 420px);
     margin-left: 0;
     width: 100%;
-    border-radius: clamp(20px, 6vw, 28px);
+    border-radius: 20px;
   }
 
   .hero__content {
@@ -217,7 +225,7 @@ img {
   }
 
   .hero__media {
-    border-radius: clamp(20px, 10vw, 26px);
+    border-radius: 20px;
     margin-left: 0;
     width: 100%;
   }
