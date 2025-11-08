@@ -3,8 +3,8 @@
   --bg-alt: #05050a;
   --text-primary: #f5f5f5;
   --text-secondary: rgba(245, 245, 245, 0.75);
-  --accent: #f47a20;
-  --accent-dark: #cf5d05;
+  --accent: #2ec879;
+  --accent-dark: #1f9d5c;
   --border-soft: rgba(245, 245, 245, 0.12);
   --shadow-soft: 0 32px 80px rgba(5, 5, 5, 0.55);
   --hero-pad-inline: clamp(24px, 8vw, 120px);
@@ -40,8 +40,8 @@ img {
 
 .site-header {
   padding: clamp(18px, 4vw, 32px) 0 clamp(12px, 3vw, 20px);
-  background: #ffffff;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08), 0 18px 36px rgba(0, 0, 0, 0.24);
+  background: #000000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .site-header__logo {
@@ -163,9 +163,9 @@ img {
   font-size: 14px;
   padding: 18px 32px;
   border-radius: 20px;
-  background: linear-gradient(120deg, var(--accent), #ff9445 68%, #ffb678);
-  color: #0b0b0f;
-  box-shadow: 0 24px 50px rgba(244, 122, 32, 0.42);
+  background: linear-gradient(120deg, var(--accent), #27b068 70%, var(--accent-dark));
+  color: #02160c;
+  box-shadow: 0 24px 50px rgba(46, 200, 121, 0.4);
   transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease,
     outline-offset 200ms ease, color 200ms ease;
 }
@@ -173,9 +173,9 @@ img {
 .hero__cta:hover,
 .hero__cta:focus-visible {
   transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 32px 60px rgba(244, 122, 32, 0.48);
-  background: linear-gradient(135deg, #ff9445, var(--accent));
-  color: #000;
+  box-shadow: 0 32px 60px rgba(46, 200, 121, 0.48);
+  background: linear-gradient(135deg, #36d886, var(--accent));
+  color: #010c07;
 }
 
 .hero__cta:focus-visible {
@@ -185,6 +185,8 @@ img {
 
 .hero__cta-arrow {
   display: inline-block;
+  font-size: 1.85em;
+  line-height: 0.8;
   transition: transform 200ms ease;
 }
 
