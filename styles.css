@@ -1,6 +1,6 @@
 :root {
-  --bg: #000000;
-  --bg-alt: #05050a;
+  --bg: #191919;
+  --bg-alt: #101010;
   --text-primary: #f5f5f5;
   --text-secondary: rgba(245, 245, 245, 0.75);
   --accent: #2ec879;
@@ -103,6 +103,7 @@ img {
   display: grid;
   gap: clamp(20px, 3.4vw, 32px);
   padding-inline-end: clamp(12px, 4vw, 48px);
+  max-width: 680px;
 }
 
 .hero__eyebrow {
@@ -116,11 +117,22 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: clamp(10px, 2vw, 14px);
+  gap: clamp(10px, 2vw, 14px);
+  padding: clamp(10px, 2vw, 14px) clamp(16px, 3vw, 22px);
   background: #ffffff;
   border-radius: 20px;
   border: 1px solid rgba(12, 18, 30, 0.08);
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  color: #0c121e;
+  font-family: "Inter", "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: clamp(16px, 2vw, 18px);
+  letter-spacing: 0.02em;
+}
+
+.hero__badge-text {
+  display: inline-block;
+  line-height: 1;
 }
 
 .hero__badge-logo {
@@ -147,7 +159,6 @@ img {
   font-size: clamp(16px, 1.9vw, 19px);
   line-height: 1.7;
   color: var(--text-secondary);
-  max-width: 520px;
 }
 
 .hero__cta {
