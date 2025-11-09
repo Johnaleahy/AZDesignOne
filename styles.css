@@ -71,7 +71,7 @@ img {
   margin: clamp(18px, 4vw, 40px) 0 clamp(92px, 12vw, 150px);
   padding: 0 var(--hero-pad-inline);
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
   gap: clamp(44px, 6.2vw, 90px);
   align-items: center;
   position: relative;
@@ -110,6 +110,7 @@ img {
 .hero__video {
   width: 100%;
   height: 100%;
+  display: block;
   position: relative;
   z-index: 0;
   object-fit: cover;
@@ -123,7 +124,7 @@ img {
   padding: clamp(18px, 3.4vw, 32px) clamp(16px, 3vw, 40px);
   max-width: 880px;
   border-radius: 26px;
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.06), rgba(12, 18, 30, 0.1));
+  background: var(--bg);
   box-shadow: 0 24px 90px rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(18px);
   border: 1px solid rgba(255, 255, 255, 0.06);
@@ -140,24 +141,16 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(12px, 2.4vw, 18px);
   padding: clamp(10px, 1.9vw, 14px) clamp(18px, 3vw, 26px);
-  background: #ffffff;
+  background: var(--bg);
   border-radius: 20px;
-  border: 1px solid rgba(12, 18, 30, 0.08);
+  border: 1px solid var(--border-soft);
   box-shadow: 0 18px 36px rgba(0, 0, 0, 0.3);
-  color: #0c121e;
+  color: var(--text-primary);
   font-family: "Inter", "Montserrat", sans-serif;
   font-weight: 700;
   font-size: clamp(18px, 2.6vw, 22px);
   letter-spacing: 0.02em;
-}
-
-.hero__badge-text {
-  display: inline-block;
-  line-height: 1;
-  font-size: clamp(22px, 3.4vw, 30px);
-  letter-spacing: 0.03em;
 }
 
 .hero__badge-logo {
