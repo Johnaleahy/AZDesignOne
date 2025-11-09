@@ -1,0 +1,283 @@
+:root {
+  --bg: #191919;
+  --bg-alt: #101010;
+  --text-primary: #f5f5f5;
+  --text-secondary: rgba(245, 245, 245, 0.75);
+  --accent: #2ec879;
+  --accent-dark: #1f9d5c;
+  --border-soft: rgba(245, 245, 245, 0.12);
+  --shadow-soft: 0 32px 80px rgba(5, 5, 5, 0.55);
+  --hero-pad-inline: clamp(24px, 8vw, 120px);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-primary);
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.wrapper {
+  width: min(1180px, 92vw);
+  margin: 0 auto;
+}
+
+.site-header {
+  padding: clamp(16px, 3.6vw, 26px) 0 clamp(10px, 2.6vw, 18px);
+  background: var(--bg);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 2.6vw, 24px);
+  flex-wrap: wrap;
+}
+
+.site-header__logo {
+  width: clamp(44px, 7vw, 86px);
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.45));
+}
+
+.site-header__tagline {
+  font-family: "Inter", "Montserrat", sans-serif;
+  font-size: clamp(16px, 2.3vw, 22px);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #ffffff;
+  opacity: 0.85;
+}
+
+.hero {
+  width: 100%;
+  margin: clamp(18px, 4vw, 40px) 0 clamp(92px, 12vw, 150px);
+  padding: 0 var(--hero-pad-inline);
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: clamp(44px, 6.2vw, 90px);
+  align-items: center;
+  position: relative;
+}
+
+.hero__media {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: clamp(360px, 52vh, 520px);
+  margin-left: calc(var(--hero-pad-inline) * -1.1);
+  width: calc(100% + var(--hero-pad-inline) * 1.1);
+  background: linear-gradient(135deg, rgba(244, 122, 32, 0.24), rgba(5, 8, 22, 0.92));
+  box-shadow: 0 44px 120px rgba(0, 0, 0, 0.55);
+}
+
+.hero__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  pointer-events: none;
+}
+
+.hero__media-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 35% 30%, rgba(255, 200, 150, 0.45), transparent 55%),
+    radial-gradient(circle at 70% 80%, rgba(77, 136, 255, 0.22), transparent 60%);
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero__video {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 0;
+  object-fit: cover;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  gap: clamp(18px, 3vw, 30px);
+  padding: clamp(18px, 3.4vw, 32px) clamp(16px, 3vw, 40px);
+  max-width: 880px;
+  border-radius: 26px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.06), rgba(12, 18, 30, 0.1));
+  box-shadow: 0 24px 90px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(12px, 2.2vw, 18px);
+  flex-wrap: wrap;
+}
+
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(12px, 2.4vw, 18px);
+  padding: clamp(10px, 1.9vw, 14px) clamp(18px, 3vw, 26px);
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid rgba(12, 18, 30, 0.08);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.3);
+  color: #0c121e;
+  font-family: "Inter", "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: clamp(18px, 2.6vw, 22px);
+  letter-spacing: 0.02em;
+}
+
+.hero__badge-text {
+  display: inline-block;
+  line-height: 1;
+  font-size: clamp(22px, 3.4vw, 30px);
+  letter-spacing: 0.03em;
+}
+
+.hero__badge-logo {
+  width: clamp(52px, 7.2vw, 78px);
+}
+
+.hero__title {
+  font-family: "Inter", "Montserrat", sans-serif;
+  font-size: clamp(36px, 4.6vw, 64px);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+}
+
+.hero__subtitle {
+  font-family: "Inter", "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: clamp(17px, 2.3vw, 22px);
+  line-height: 1.3;
+  color: rgba(245, 245, 245, 0.72);
+  max-width: 580px;
+}
+
+.hero__description {
+  font-size: clamp(16px, 1.95vw, 20px);
+  line-height: 1.68;
+  color: rgba(245, 245, 245, 0.78);
+  max-width: 680px;
+}
+
+.hero__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: fit-content;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 15px;
+  padding: 18px 36px;
+  border-radius: 20px;
+  background: linear-gradient(118deg, var(--accent), #2ab971 68%, var(--accent-dark));
+  color: #02160c;
+  box-shadow: 0 26px 56px rgba(46, 200, 121, 0.38);
+  transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease,
+    outline-offset 200ms ease, color 200ms ease;
+}
+
+.hero__cta:hover,
+.hero__cta:focus-visible {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 32px 60px rgba(46, 200, 121, 0.48);
+  background: linear-gradient(135deg, #36d886, var(--accent));
+  color: #010c07;
+}
+
+.hero__cta:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.9);
+  outline-offset: 4px;
+}
+
+.hero__cta-arrow {
+  display: inline-block;
+  font-size: 2em;
+  line-height: 0.7;
+  transition: transform 200ms ease;
+}
+
+.hero__cta:hover .hero__cta-arrow,
+.hero__cta:focus-visible .hero__cta-arrow {
+  transform: translateX(6px);
+}
+
+@media (max-width: 1100px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 0 clamp(16px, 6vw, 36px);
+    gap: clamp(38px, 9vw, 60px);
+  }
+
+  .hero__media {
+    min-height: clamp(320px, 60vh, 420px);
+    margin-left: 0;
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .hero__content {
+    text-align: center;
+    align-items: center;
+    padding: clamp(20px, 5vw, 34px) clamp(18px, 4.4vw, 40px);
+  }
+
+  .hero__description {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    margin: clamp(24px, 10vw, 60px) auto clamp(70px, 16vw, 120px);
+    gap: clamp(32px, 10vw, 52px);
+    padding: 0 clamp(14px, 8vw, 28px);
+  }
+
+  .hero__media {
+    border-radius: 20px;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .hero__eyebrow {
+    padding: 0;
+  }
+
+  .hero__cta {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
