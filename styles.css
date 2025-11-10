@@ -143,20 +143,29 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: clamp(10px, 1.9vw, 14px) clamp(18px, 3vw, 26px);
-  background: var(--bg);
+  gap: clamp(12px, 1.8vw, 18px);
+  padding: clamp(10px, 1.9vw, 14px) clamp(22px, 3.6vw, 32px);
+  background: #ffffff;
   border-radius: 20px;
-  border: 1px solid var(--border-soft);
-  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.3);
-  color: var(--text-primary);
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.24);
+  color: #0b1727;
   font-family: "Inter", "Montserrat", sans-serif;
   font-weight: 700;
   font-size: clamp(18px, 2.6vw, 22px);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }
 
 .hero__badge-logo {
-  width: clamp(52px, 7.2vw, 78px);
+  height: clamp(28px, 3.2vw, 42px);
+  width: auto;
+  display: block;
+}
+
+.hero__badge-text {
+  display: inline-block;
+  line-height: 1;
 }
 
 .hero__title {
